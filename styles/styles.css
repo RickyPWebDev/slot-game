@@ -1,0 +1,228 @@
+body {
+    background-image: url('../assets/textured-background.png');
+    background-size: cover; 
+    /* background-color: black; */
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: white;
+    padding: 10px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.link-to-win-table {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+.bet-options {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.bet-options label {
+    margin: 0 10px;
+    font-size: 1.2rem;
+}
+
+.slot-machine {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.slot {
+    font-size: 50px;
+    padding: 20px;
+    border: 2px solid #ddd;
+    margin: 5px;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 10px;
+    transition: transform 0.2s;
+}
+
+.slot:hover {
+    transform: scale(1.1);
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    border-radius: 5%;
+    width: 30%;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 1.5rem;
+}
+
+#balance {
+    margin-top: 10px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* Card container styles */
+.card-container {
+    display: flex;
+    /* Use flexbox to arrange cards inline */
+    justify-content: center;
+    /* Center the cards horizontally */
+    margin: 20px 0;
+    /* Add some margin for spacing */
+    flex-wrap: wrap;
+    /* Allow wrapping on smaller screens */
+
+}
+
+.card {
+
+    background-image: url('../assets/back-card.png');
+        /* Add your background image */
+        background-size: cover;
+        /* Cover the entire card area */
+
+    width: 100px;
+    /* Set a fixed width for each card */
+    height: 150px;
+    /* Set a fixed height for each card */
+    background-color: #f0f0f0;
+    /* Card background color */
+    border: 1px solid #ddd;
+    /* Card border */
+    border-radius: 8px;
+    /* Rounded corners */
+    display: flex;
+    /* Flexbox for card content */
+    align-items: center;
+    /* Center content vertically */
+    justify-content: center;
+    /* Center content horizontally */
+    margin: 0 10px;
+    /* Space between cards */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    transition: transform 0.2s;
+    /* Smooth hover effect */
+}
+
+.card:hover {
+    transform: scale(1.05);
+    /* Scale up on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Add shadow on hover */
+}
+
+a {
+    display: inline-block;
+    margin-top: 20px;
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5rem;
+        /* Smaller title for mobile */
+    }
+
+    .slot {
+        font-size: 3rem;
+        /* Increase font size for mobile */
+        width: 60px;
+        /* Adjust slot width for mobile */
+        height: 60px;
+        /* Adjust slot height for mobile */
+        padding: 10px;
+        /* Reduce padding */
+    }
+
+    button {
+        width: 100%;
+        /* Full width button on mobile */
+        padding: 15px;
+        font-size: 1.5rem;
+        /* Larger font for buttons */
+    }
+
+    .card {
+        width: 80px;
+        /* Adjust width for smaller screens */
+        height: 120px;
+        /* Adjust height for smaller screens */
+    }
+}
+
+@media (max-width: 400px) {
+    h1 {
+        font-size: 1.2rem;
+        /* Further reduce title size for very small devices */
+    }
+
+    .slot {
+        font-size: 2.5rem;
+        /* Further reduce slot size for very small devices */
+        width: 50px;
+        /* Reduce width for very small devices */
+        height: 50px;
+        /* Reduce height for very small devices */
+    }
+
+    #result {
+        font-size: 1.2rem;
+        /* Increase size of result text for visibility */
+    }
+
+    .card {
+        width: 60px;
+        /* Further reduce width for very small devices */
+        height: 100px;
+        /* Further reduce height for very small devices */
+    }
+}
