@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slot Machine Game</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <h1>Slot Machine Game</h1>
+    <a class="link-to-win-table" href="win-table.html">See Payout Table</a>
+
+    <div class="bet-options">
+        <label>
+            <input type="radio" name="bet" value="1" checked> £1
+        </label>
+        <label>
+            <input type="radio" name="bet" value="5"> £5
+        </label>
+        <label>
+            <input type="radio" name="bet" value="10"> £10
+        </label>
+    </div>
+
+    <div class="slot-machine">
+        <div class="slot" id="slot1">🍒</div>
+        <div class="slot" id="slot2">🍋</div>
+        <div class="slot" id="slot3">🍊</div>
+    </div>
+
+    <button id="spin-button">Spin</button>
+    <p id="result"></p>
+    <div id="balance">Balance: £1000</div> <!-- Add balance display -->
+
+    <audio id="background-music" src="assets/casino.mp3" loop></audio>
+    <audio id="spin-sound" src="assets/slot-spin.wav"></audio>
+    <audio id="win-sound" src="assets/win.wav"></audio>
+    <script src="scripts/script.js"></script>
+
+    <div id="card-modal" style="display:none;">
+        <h2>Select a Card</h2>
+        <div class="card-container"> <!-- Added this wrapper -->
+            <div class="card" data-win="0"></div>
+            <div class="card" data-win="1"></div>
+            <div class="card" data-win="5"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>
